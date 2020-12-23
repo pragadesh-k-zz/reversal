@@ -27,10 +27,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-header {
-  position: static;
-  width: calc(100% - 1rem);
-  height: 5vh;
+.header {
   font-size: 1.6em;
   letter-spacing: 5px;
   text-transform: uppercase;
@@ -40,32 +37,33 @@ header {
 }
 
 .output {
-  margin-top: 1rem;
-  font-weight: 200;
-  overflow-y: scroll;
-  margin-bottom: 15px;
+  margin-top: 1em;
   text-align: center;
   font-weight: 300;
+  height: 100%;
 }
 
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-y: scroll;
 }
 
 .wrapper {
   background-color: rgba(255, 255, 255, 0.452);
   display: grid;
   width: 80%;
+  min-width: 225px;
   padding: 1rem;
-  min-height: 500px;
+  height: 500px;
+  max-height: 600px;
 }
 
 .left {
   background-color: var(--gray);
   padding: 1rem;
-  position: relative;
+  overflow: hidden;
 }
 
 .right {
@@ -130,12 +128,10 @@ header {
 /* Desktops */
 @media (min-width: 1000px) {
   .wrapper {
-    grid-template-columns: 62.9% auto;
+    grid-template-columns: 63.9% auto;
+    min-width: 871px;
   }
 
-  .output {
-    max-height: 325px;
-  }
   .input-form {
     height: 150px;
   }
@@ -161,10 +157,6 @@ header {
     max-width: 335px;
     height: 150px;
   }
-
-  .output {
-    max-height: 325px;
-  }
 }
 
 /* Mobile phones */
@@ -183,17 +175,13 @@ header {
   .btn {
     padding: 0.3em;
   }
-  header {
+  .header {
     font-size: 1em;
-  }
-
-  .output {
-    max-height: 325px;
   }
 }
 
-@media (min-width: 0px) and (max-width: 310px) {
-  .wrapper {
-    grid-template-rows: 61.9% auto;
+@media (min-width: 435px) and (max-width: 500px) {
+  .header {
+    font-size: 1.2em;
   }
 }
