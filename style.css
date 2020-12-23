@@ -44,6 +44,8 @@ header {
   font-weight: 200;
   overflow-y: scroll;
   margin-bottom: 15px;
+  text-align: center;
+  font-weight: 300;
 }
 
 .container {
@@ -131,6 +133,9 @@ header {
     grid-template-columns: 62.9% auto;
   }
 
+  .output {
+    max-height: 325px;
+  }
   .input-form {
     height: 150px;
   }
@@ -155,6 +160,10 @@ header {
   .input-form {
     max-width: 335px;
     height: 150px;
+  }
+
+  .output {
+    max-height: 325px;
   }
 }
 
